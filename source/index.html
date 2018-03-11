@@ -2,11 +2,142 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>HTML Academy: Пинк</title>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Pink</title>
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/adaptive">Профессиональный HTML и CSS</a>», уровень 2.</p>
-
+    <div class="page-wrapper">
+      <header class="page-header">
+        <h1 class="visually-hidden">Pink</h1>
+        <a class="page-logo">Pink</a>
+        <nav class="page-nav">
+          <ul class="page-nav__list">
+            <li class="page-nav__item"><a>Главная</a></li>
+            <li class="page-nav__item"><a href="photo.html">Фотографии</a></li>
+            <li class="page-nav__item"><a href="form.html">Конкурс</a></li>
+            <li class="page-nav__item"><a href="https://htmlacademy.ru/" target="_blank">HTML Academy</a></li>
+          </ul>
+        </nav>
+        <button class="page-nav__toggle page-nav__toggle--off" type="button">
+          <span class="visually-hidden">Меню</span>
+        </button>
+      </header>
+      <main class="main">
+        <section class="dowload">
+          <h2 class="visually-hidden">Скачать приложение</h2>
+          <p>Доступно для iPhone, iPad, Android, Windows Phone, OS X, Window 8</p>
+          <a class="btn" href="https://www.apple.com/ru/itunes/download/" target="_blank">Скачать приложение</a>
+          <div class="dowload__links">
+            <a class="dowload__link dowload__link--apple" href="https://www.apple.com/ru/itunes/download/" target="_blank">Apple</a>
+            <a class="dowload__link dowload__link--android" href="https://play.google.com/store" target="_blank">Android</a>
+            <a class="dowload__link dowload__link--microsoft" href="https://www.microsoft.com/ru-ru/store" target="_blank">Microsoft</a>
+          </div>
+        </section>
+        <section class="features">
+          <header class="features__header">
+            <h2 class="visually-hidden">Основные особенности</h2>
+            <p>Устали от серости мегаполиса?</p>
+            <p>Нам есть, что вам  предложить!</p>
+          </header>
+          <ul class="features__list">
+            <li class="features__item">
+              <h3>Поднимает настроение</h3>
+              <p>Приложение позволит вам победить осеннюю хандру и дипрессию буквально в несколько кликов!</p>
+            </li>
+            <li class="features__item">
+              <h3>Меняет мир вокруг</h3>
+              <p>Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
+            </li>
+            <li class="features__item features__item--last">
+              <h3>Заводит новых друзей</h3>
+              <p>Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
+            </li>
+          </ul>
+          <img class="features__image" src="#" alt="Photo mobile" width="100" height="100">
+        </section>
+        <section class="comments">
+          <h2 class="visually-hidden">Отзывы</h2>
+          <div class="comments__slider slider">
+            <section class="comments__slide comments__slide--1">
+              <h3>Николай Петров</h3>
+              <blockquote>
+                &laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на превычные серые вещи! А ещё я познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;
+              </blockquote>
+            </section>
+            <section class="comments__slide comments__slide--2">
+              <h3>Николай Петров</h3>
+              <blockquote>
+                &laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на превычные серые вещи! А ещё я познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;
+              </blockquote>
+            </section>
+            <section class="comments__slide comments__slide--3">
+              <h3>Николай Петров</h3>
+              <blockquote>
+                &laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на превычные серые вещи! А ещё я познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;
+              </blockquote>
+            </section>
+          </div>
+          <div class="comments__slide-controls">
+              <i class="comments__slide-toggle comments__slide-toggle--active"></i>
+              <i class="comments__slide-toggle"></i>
+              <i class="comments__slide-toggle"></i>
+          </div>
+        </section>
+        <section class="proposals">
+          <h2 class="visually-hidden">Наши предложения</h2>
+          <div class="proposals__slider slider">
+            <table class="proposals__table">
+              <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+              <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+              </tr>
+            </table>
+            <div class="proposals__slide-controls">
+              <i class="proposals__slide-toggle proposals__slide-toggle--active"></i>
+              <i class="proposals__slide-toggle"></i>
+              <i class="proposals__slide-toggle"></i>
+            </div>
+          </div>
+        </section>
+        <section class="contacts">
+          <header class="contacts__header">
+            <h2 class="visually-hidden">Наши контакты</h2>
+            <p>Остались вопросы? Свяжитесь с нами!</p>
+          </header>
+          <section class="contacts__item">
+            <h3>Звоните:</h3>
+            <span>+7 (812) 555 66 66</span>
+          </section>
+          <section class="contacts__item">
+            <h3>Пишите:</h3>
+            <span>mail@htmlacademy.ru</span>
+          </section>
+          <section class="contacts__item">
+            <h3>Приезжайте в гости:</h3>
+            <span>ул. Большая Конюшенная, 19/8 </span>
+          </section>
+        </section>
+        <section class="map">
+          <h2 class="visually-hidden">Мы на карте</h2>
+        </section>
+      </main>
+      <!--<footer class="page-footer"></footer>-->
+    </div>
   </body>
 </html>
