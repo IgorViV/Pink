@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Pink</title>
+  </head>
+  <body>
+    <div class="page-wrapper">
+      <header class="page-header page-header--inner-page">
+        <h1 class="visually-hidden">Pink</h1>
+        <a class="page-logo" href="index.html">Pink</a>
+        <nav class="page-nav">
+          <ul class="page-nav__list">
+            <li class="page-nav__item"><a href="index.html">Главная</a></li>
+            <li class="page-nav__item"><a href="photo.html">Фотографии</a></li>
+            <li class="page-nav__item"><a>Конкурс</a></li>
+            <li class="page-nav__item"><a href="https://htmlacademy.ru/" target="_blank">HTML Academy</a></li>
+          </ul>
+        </nav>
+        <button class="page-nav__toggle page-nav__toggle--off" type="button">
+          <span class="visually-hidden">Меню</span>
+        </button>
+        <section class="page-banner">
+          <h2>Конкурс на самое безбашенное путишествие с Пинк</h2>
+        </section>
+      </header>
+      <main class="main">
+        <section class="questionnaire">
+          <header class="questionnaire__header">
+            <h2 class="visually-hidden">Форма для участия в конкурсе</h2>
+            <p>
+              Поделитесь своей историей и получите шанс выиграть ценный приз &#8212; 1000 миль на Вашу бонусную карту!
+            </p>
+          </header>
+          <form class="form" action="#" method="POST">
+
+            <fieldset class="form-group form-group--initial">
+              <legend class="form-group__title">
+                <span class="visually-hidden">
+                  Представьтесь:
+                </span>
+              </legend>
+              <ul class="input-block">
+                <li class="input-block__item">
+                  <label for="last-name">Фамилия:</label>
+                  <input type="text" id="last-name" required placeholder="Укажите фамилию*">
+                </li>
+                <li class="input-block__item">
+                  <label for="first-name">Имя:</label>
+                  <input type="text" id="first-name" required placeholder="Введите Ваше имя*">
+                </li>
+                <li class="input-block__item">
+                  <label for="last-name">Фамилия:</label>
+                  <input type="text" id="last-name" required placeholder="Укажите фамилию*">
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="form-group form-group--progress">
+              <legend class="form-group__title">
+                <span>
+                  Ваши безбашенные достижения в путешествии
+                </span>
+              </legend>
+              <ul class="input-block">
+                <li class="input-block__item">
+                  <label>
+                      <input type="checkbox" name="progress" value="selfie with a shark" checked>
+                      Сделал селфи с акулой
+                  </label>
+                </li>
+                <li class="input-block__item">
+                  <label>
+                    <input type="checkbox" name="progress" value="burnt on the beach" checked>
+                    Обгорел на пляже
+                  </label>
+                </li>
+                <li class="input-block__item">
+                  <label>
+                    <input type="checkbox" name="progress" value="Chuck Norris saw">
+                    Видел Чака Норриса
+                  </label>
+                </li>
+                <li class="input-block__item">
+                  <label>
+                    <input type="checkbox" name="progress" value="bought souvenirs">
+                    Накупил сувениров
+                  </label>
+                </li>
+                <li class="input-block__item">
+                  <label>
+                    <input type="checkbox" name="progress" value="held the tower" checked>
+                    Удержал башню
+                  </label>
+                </li>
+                <li class="input-block__item">
+                  <label>
+                    <input type="checkbox" name="progress" value="trashed the hotel">
+                    Разгромил отель
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="form-group form-group--contacts">
+              <legend class="form-group__title">
+                <span class="visually-hidden">
+                  Ваши контакты:
+                </span>
+              </legend>
+              <ul class="input-block">
+                <li class="input-block__item">
+                  <label for="phone">Номер телефона</label>
+                  <input type="tel" id="phone" name="phone" placeholder="Номер, пожайлуста">
+                </li>
+                <li class="input-block__item">
+                  <label for="email">Адрес почты</label>
+                  <input type="email" id="email" name="email" required placeholder="Введите почту*">
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="form-group form-group--applications">
+              <legend class="form-group__title">
+                <span class="visually-hidden">
+                  С каким приложением путешествовали?
+                </span>
+              </legend>
+              <ul class="input-block">
+                <li class="input-block__item">
+                  <label>
+                    <input type="radio" name="application" value="ios" checked>
+                    Pink для iOS
+                  </label>
+                </li>
+                <li class="input-block__item">
+                  <label>
+                    <input type="radio" name="application" value="android">
+                    Pink на Android
+                  </label>
+                </li>
+                <li class="input-block__item">
+                  <label>
+                    <input type="radio" name="application" value="windows">
+                    Windows Phone
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="form-group form-group--emotions">
+              <legend class="form-group__title">
+                <span>
+                    Опишите свои эмоции
+                </span>
+              </legend>
+              <textarea name="emotions" cols="30" rows="10" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+            </fieldset>
+            <div class="form__footer">
+              <button type="submit">
+                Отправить форму
+              </button>
+              <span>
+                * — обязательные поля
+              </span>
+            </div>
+          </form>
+        </section>
+      </main>
+      <footer class="page-footer">
+        <p class="page-footer__logo">
+          <a href="#">Pink</a>
+        </p>
+        <p class="page-footer__social">
+          <a href="https://twitter.com/htmlacademy_ru" title="Наш Твитер" target="_blank"><span class="visually-hidden">Наш Твитер</span></a>
+          <a href="https://www.facebook.com/htmlacademy" title="Наш Фейсбук" target="_blank"><span class="visually-hidden">Наш Фейсбук</span></a>
+          <a href="https://www.youtube.com/user/htmlacademyru" title="Наш канал на YouTube" target="_blank"><span class="visually-hidden">Наш канал на YouTube</span></a>
+        </p>
+        <p class="page-footer__copyright">
+          <a href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
+            <span>Разработано</span>
+            <img src="#" alt="Logo HTML Academy">
+          </a>
+        </p>
+      </footer>
+    </div>
+    <div class="modal-content modal-content--failure">
+      <h2>Что-то пошло не так!</h2>
+      <p>
+        Проверьте поля, выделенные красным, скорее всего вы забыли их заплонить
+      </p>
+      <button type="button">
+        Ок
+      </button>
+    </div>
+    <div class="modal-content modal-content--success">
+      <h2>Ваша заявка отправлена</h2>
+      <p>
+        Спасибо за ваше участие, ваша заявка уже поступила к нам. В ближайшее время мы рассмотрим её и оповестим Вас.
+      </p>
+      <button type="button">
+        Закрыть окно
+      </button>
+    </div>
+  </body>
+</html>
