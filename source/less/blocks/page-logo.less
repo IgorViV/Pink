@@ -1,0 +1,23 @@
+.page-logo {
+  padding: 19px 20px;
+
+  a {
+    display: inline-block;
+    vertical-align: top;
+    padding: 0;
+    font-weight: @font-weight-light;
+    font-size: 24px;
+    line-height: 28px;
+    color: @logo-color;
+  }
+
+  a[href] {
+    &:hover {
+      color: @logo-color--hover;
+    }
+
+    &:active {
+      color: @logo-color--active;
+    }
+  }
+}

@@ -1,0 +1,42 @@
+.page-nav {
+  //display: none;
+}
+
+.page-nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.page-nav__item {
+  background-color: @bg-color-nav-item;
+  border-top: 1px solid #485461;
+  border-bottom: 1px solid @black;
+
+  &:hover {
+    border-top: none;
+  }
+
+  &--active:hover {
+    border-top: 1px solid #485461;
+  }
+
+  a {
+    display: block;
+    padding: 15px 0;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 32px;
+  }
+
+  a[href] {
+    &:hover {
+      color: @mobile-color-link--hover;
+    }
+
+    &:active {
+      color: @mobile-color-link--active;
+    }
+  }
+}
