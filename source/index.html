@@ -26,7 +26,7 @@
               <li class="page-nav__item"><a href="https://htmlacademy.ru/" target="_blank">HTML Academy</a></li>
             </ul>
           </nav>
-          <button class="page-header__toggle nav-toggle" type="button"> <!-- nav-toggle~~closed для закрытового меню -->
+          <button class="page-header__toggle nav-toggle" type="button">
             <span class="visually-hidden">
               Меню
             </span>
@@ -49,21 +49,24 @@
         </div>
       </header>
       <main class="main">
-        <section class="download">
+        <div class="download">
           <h2 class="visually-hidden">Скачать приложение</h2>
           <p>Доступно для iPhone, iPad, Android, Windows Phone, OS X, Window 8</p>
           <a class="download__btn btn" href="https://www.apple.com/ru/itunes/download/" target="_blank">Скачать приложение</a>
           <div class="download__links">
-            <a class="download__link download__link--apple" href="https://www.apple.com/ru/itunes/download/" target="_blank">Apple</a>
-            <a class="download__link download__link--android" href="https://play.google.com/store" target="_blank">Android</a>
-            <a class="download__link download__link--microsoft" href="https://www.microsoft.com/ru-ru/store" target="_blank">Microsoft</a>
+            <a class="download__link download__link--apple" href="https://www.apple.com/ru/itunes/download/" target="_blank" title="Apple itunes">
+            </a>
+            <a class="download__link download__link--android" href="https://play.google.com/store" target="_blank" title="Android play">
+            </a>
+            <a class="download__link download__link--microsoft" href="https://www.microsoft.com/ru-ru/store" target="_blank" title="Microsoft store">
+            </a>
           </div>
-        </section>
+        </div>
         <section class="features">
           <header class="features__header">
             <h2 class="visually-hidden">Основные особенности</h2>
-            <p>Устали от серости мегаполиса?</p>
-            <p>Нам есть, что вам  предложить!</p>
+            <p class="features__text">Устали от серости мегаполиса?</p>
+            <p class="features__text features__text--last">Нам есть, что вам  предложить!</p>
           </header>
           <ul class="features__list">
             <li class="features__item">
@@ -79,11 +82,11 @@
               <p>Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
             </li>
           </ul>
-          <img class="features__image" src="#" alt="Photo mobile" width="100" height="100">
+          <!--<img class="features__image" src="#" alt="Photo mobile" width="100" height="100">-->
         </section>
         <section class="comments">
           <h2 class="visually-hidden">Отзывы</h2>
-          <div class="comments__slider slider">
+          <div class="comments__slider">
             <section class="comments__slide comments__slide--1">
               <h3>Николай Петров</h3>
               <blockquote>
@@ -91,13 +94,13 @@
               </blockquote>
             </section>
             <section class="comments__slide comments__slide--2">
-              <h3>Николай Петров</h3>
+              <h3>Петр Николаев</h3>
               <blockquote>
                 &laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на превычные серые вещи! А ещё я познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;
               </blockquote>
             </section>
             <section class="comments__slide comments__slide--3">
-              <h3>Николай Петров</h3>
+              <h3>Александр Иванов</h3>
               <blockquote>
                 &laquo;Это приложение перевернуло мой мир и позволило по-новому взглянуть на превычные серые вещи! А ещё я познакомился со своей будущей женой в комментариях к выложенной фотографии!&raquo;
               </blockquote>
@@ -111,32 +114,32 @@
         </section>
         <section class="proposals">
           <h2 class="visually-hidden">Наши предложения</h2>
-          <div class="proposals__slider slider">
+          <div class="proposals__slider">
             <table class="proposals__table">
-              <tr>
-                <th></th>
-                <th></th>
-                <th></th>
+              <tr class="proposals__row">
+                <th class="proposals__cell proposals__cell--header">Стандарт<br> <span>3,99 USD</span></th>
+                <th class="proposals__cell proposals__cell--header proposals__cell--hit">Стандарт<br> <span>3,99 USD</span></th>
+                <th class="proposals__cell proposals__cell--header">Стандарт<br> <span>3,99 USD</span></th>
               </tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
+              <tr class="proposals__row">
+                <td class="proposals__cell">Розовый фильтр</td>
+                <td class="proposals__cell proposals__cell--yes">Розовый фильтр</td>
+                <td class="proposals__cell">Розовый фильтр</td>
               </tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
+              <tr class="proposals__row">
+                <td class="proposals__cell">Смайлики</td>
+                <td class="proposals__cell proposals__cell--yes">Смайлики</td>
+                <td class="proposals__cell">Смайлики</td>
               </tr>
-              <tr>
-                <td></td>
-                <td></td>
-                <td></td>
+              <tr class="proposals__row">
+                <td class="proposals__cell">Комментарии</td>
+                <td class="proposals__cell">Комментарии</td>
+                <td class="proposals__cell">Комментарии</td>
               </tr>
             </table>
             <div class="proposals__slide-controls">
-              <button class="proposals__slide-toggle proposals__slide-toggle--active" type="button"></button>
               <button class="proposals__slide-toggle" type="button"></button>
+              <button class="proposals__slide-toggle proposals__slide-toggle--active" type="button"></button>
               <button class="proposals__slide-toggle" type="button"></button>
             </div>
           </div>
@@ -150,13 +153,13 @@
             <h3>Звоните:</h3>
             <span>+7 (812) 555 66 66</span>
           </section>
-          <section class="contacts__item">
+          <section class="contacts__item contacts__item--mail">
             <h3>Пишите:</h3>
-            <span>mail@htmlacademy.ru</span>
+            <a href="#">mail@htmlacademy.ru</a>
           </section>
-          <section class="contacts__item">
+          <section class="contacts__item contacts__item--address">
             <h3>Приезжайте в гости:</h3>
-            <span>ул. Большая Конюшенная, 19/8 </span>
+            <span>ул. Большая<br> Конюшенная, 19/8 </span>
           </section>
         </section>
         <section class="map">
@@ -164,7 +167,7 @@
           <div id="yandex-map"></div>
         </section>
       </main>
-      <footer class="page-footer">
+      <footer class="page-footer page-footer--tablet">
         <p class="page-footer__logo">
           <a href="#">Pink</a>
         </p>
