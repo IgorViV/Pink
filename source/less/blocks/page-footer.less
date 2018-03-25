@@ -78,6 +78,10 @@
     font-size: 18px;
   }
 
+  .page-footer__copyright-img {
+    fill: @font-color-link;
+  }
+
   &:hover .page-footer__copyright-img {
     fill: @font-color-link--hover;
   }
@@ -89,7 +93,9 @@
 
 @media (min-width: @tablet-width) {
   .page-footer {
-
+    &--hidden {
+      display: flex;
+    }
   }
 }
 
@@ -98,4 +104,3 @@
 
   }
 }
-
