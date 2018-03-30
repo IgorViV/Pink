@@ -63,3 +63,35 @@
 .contacts__item--address {
   margin-bottom: 0;
 }
+
+@media (min-width: @tablet-width) {
+  .contacts {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .contacts__header {
+    width: 620px;
+
+    p {
+      width: 100%;
+      margin-bottom: 33px;
+      padding-left: 120px;
+      padding-right: 120px;
+      font-size: 40px;
+      line-height: 50px;
+    }
+  }
+
+  .contacts__item {
+    width: 310px;
+  }
+
+  .contacts__item--address {
+    width: 620px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+
+}

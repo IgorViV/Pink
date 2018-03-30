@@ -3,13 +3,11 @@
   padding-bottom: 30px;
   background-color: @white;
   overflow: hidden;
-  //border: 1px solid blue;
 }
 
 .comments__slider {
   display: flex;
   width: 960px;
-  //transform: translateX(-320px);
 }
 
 .comments__slide {
@@ -18,9 +16,8 @@
   padding-bottom: 40px;
   text-transform: none;
   text-align: center;
-  //border: 1px solid green;
 
-  h3 {
+  .comments__slide-header h3 {
     .reset-center();
     margin-bottom: 15px;
     font-weight: 700;
@@ -28,6 +25,10 @@
     line-height: 30px;
     text-transform: none;
     color: @black;
+  }
+
+  .comments__slide-header span {
+    display: none;
   }
 
   blockquote {
@@ -69,7 +70,6 @@
     width: 6px;
     height: 6px;
     background-color: #bec2c7;
-    //border: 3px solid @font-color-base;
     border-radius: 50%;
     transform: translate(-3px, -3px);
   }
@@ -83,4 +83,49 @@
     border: 3px solid @font-color-base;
     transform: translate(-6px, -6px);
   }
+}
+
+@media (min-width: @tablet-width) {
+  .comments {
+    padding-bottom: 20px;
+  }
+
+  .comments__slider {
+    width: 1980px;
+  }
+
+  .comments__slide {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 660px;
+    padding-top: 40px;
+    padding-bottom: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    .comments__slide-header h3 {
+      .reset-center();
+      margin-bottom: 5px;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 30px;
+      text-transform: none;
+      color: @black;
+    }
+
+    .comments__slide-header span {
+      display: block;
+    }
+
+    blockquote {
+      .reset();
+      margin-bottom: 25px;
+      font-size: 18px;
+      line-height: 30px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+
 }

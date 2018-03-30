@@ -50,6 +50,14 @@
   border-radius: 50%;
   overflow: hidden;
 
+  &:hover {
+    border-color: #2e3b4a;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
   &--last {
     margin-right: 0;
   }
@@ -93,9 +101,26 @@
 
 @media (min-width: @tablet-width) {
   .page-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 128px;
+    padding: 0 20px;
+
     &--hidden {
       display: flex;
     }
+  }
+
+  .page-footer__logo,
+  .page-footer__social,
+  .page-footer__copyright {
+    margin-bottom: 0;
+  }
+
+  .page-footer__logo {
+    align-self: flex-start;
+    margin-top: 36px;
   }
 }
 
