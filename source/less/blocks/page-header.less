@@ -13,6 +13,7 @@
 }
 
 .page-header__wrapper {
+  //padding-left: 20px;
   background-color: #283645;
 }
 
@@ -41,5 +42,24 @@
 }
 
 @media (min-width: @desktop-width) {
+  .page-header {
+    padding-bottom: 742px;
+    background-image: url(../img/iphone-hand-desktop@1x.png), url(../img/bg-back-desktop@1x.jpg);
+    background-position: 145px bottom, center bottom;
+  }
 
+  .page-header__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .center();
+    padding-left: 130px;
+    padding-right: 130px;
+  }
+
+  .page-header__wrapper--closed {
+    .page-header__nav {
+      display: block;
+    }
+  }
 }

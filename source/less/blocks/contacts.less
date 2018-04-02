@@ -85,6 +85,7 @@
 
   .contacts__item {
     width: 310px;
+    align-self: flex-end;
   }
 
   .contacts__item--address {
@@ -93,5 +94,26 @@
 }
 
 @media (min-width: @desktop-width) {
+  .contacts {
+    padding-left: 130px;
+    padding-right: 130px;
+  }
 
+  .contacts__header {
+    margin-left: 160px;
+    margin-right: 160px;
+  }
+
+  .contacts__item {
+    align-self: baseline;
+    margin-bottom: 0;
+  }
+
+  .contacts__item--address {
+    width: 310px;
+  }
+
+  .contacts__item--mail {
+    order: 4;
+  }
 }

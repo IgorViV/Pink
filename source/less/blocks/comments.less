@@ -73,6 +73,19 @@
     border-radius: 50%;
     transform: translate(-3px, -3px);
   }
+
+  &--prev,
+  &--next {
+    display: none;
+  }
+
+  &:hover::before {
+    background-color: #7e868f;
+  }
+
+  &:active::before {
+    background-color: #e9ebec;
+  }
 }
 
 .comments__slide-toggle--active {
@@ -82,6 +95,10 @@
     background-color: @white;
     border: 3px solid @font-color-base;
     transform: translate(-6px, -6px);
+  }
+
+  &:hover::before {
+    background-color: @white;
   }
 }
 
@@ -127,5 +144,76 @@
 }
 
 @media (min-width: @desktop-width) {
+  .comments {
+    position: relative;
+    padding-left: 190px;
+    padding-right: 190px;
+    padding-bottom: 20px;
+    background-size: 85px 65px;
+    background-image: url(../img/icon-quotes.svg);
+    background-position: center 70px;
+    background-repeat: no-repeat;
+  }
 
+  .comments__slider {
+    width: 2840px;
+    padding-top: 190px;
+
+  }
+
+  .comments__slide {
+    display: flex;
+    flex-direction: column-reverse;
+    width: 820px;
+    margin-right: 190px;
+    padding-top: 40px;
+    padding-bottom: 25px;
+
+    &--3 {
+      margin-right: 0;
+    }
+  }
+
+  .comments__slide-controls {
+    position: absolute;
+    left:120px;
+    top: 210px;
+    display: flex;
+    justify-content: space-between;
+    width: 960px;
+    .reset-center();
+    text-align: center;
+  }
+
+  .comments__slide-toggle {
+    display: none;
+  }
+
+  .comments__slide-toggle--prev,
+  .comments__slide-toggle--next {
+    display: inline-block;
+    width: 22px;
+    height: 42px;
+    background-image: url(../img/left-arrow.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 0;
+    opacity: 0.5;
+
+    &::before {
+      display: none;
+    }
+
+    &:hover {
+      opacity: 1;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  .comments__slide-toggle--next {
+    background-image: url(../img/right-arrow.png);
+  }
 }

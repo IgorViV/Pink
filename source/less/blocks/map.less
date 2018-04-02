@@ -35,5 +35,17 @@
 }
 
 @media (min-width: @desktop-width) {
+  .map {
+    height: 500px;
+    background-size: 35px 35px, auto;
+    background-image: url("../img/icon-map-marker.svg"), url("../img/bg-map-desktop@1x.jpg");
+    background-position: center 187px, center -347px;
 
+    &::after {
+      height: 125px;
+      background-size: 100%;
+      background-image: url("../img/bg-triangle-white-footer.svg");
+      background-position: center;
+    }
+  }
 }

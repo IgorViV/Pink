@@ -66,10 +66,10 @@
           </div>
           <nav class="page-header__nav page-nav">
             <ul class="page-nav__list">
-              <li class="page-nav__item page-nav__item--active"><a>Главная</a></li>
+              <li class="page-nav__item page-nav__item--first page-nav__item--active"><a>Главная</a></li>
               <li class="page-nav__item"><a href="photo.html">Фотографии</a></li>
               <li class="page-nav__item"><a href="form.html">Конкурс</a></li>
-              <li class="page-nav__item"><a href="https://htmlacademy.ru/" target="_blank">HTML Academy</a></li>
+              <li class="page-nav__item page-nav__item--last"><a href="https://htmlacademy.ru/" target="_blank">HTML Academy</a></li>
             </ul>
           </nav>
           <button class="page-header__toggle nav-toggle" type="button">
@@ -116,7 +116,7 @@
             <p class="features__text features__text--last">Нам есть, что вам  предложить!</p>
           </header>
           <ul class="features__list">
-            <li class="features__item">
+            <li class="features__item features__item--first">
               <h3>Поднимает настроение</h3>
               <p>Приложение позволит вам победить осеннюю хандру и дипрессию буквально в несколько кликов!</p>
             </li>
@@ -125,7 +125,7 @@
               <p>Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект</p>
             </li>
             <li class="features__item features__item--last">
-              <h3>Заводит новых друзей</h3>
+              <h3>Заводит<br> новых друзей</h3>
               <p>Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых</p>
             </li>
           </ul>
@@ -167,9 +167,11 @@
             </section>
           </div>
           <div class="comments__slide-controls">
-              <button class="comments__slide-toggle comments__slide-toggle--active" type="button"></button>
-              <button class="comments__slide-toggle" type="button"></button>
-              <button class="comments__slide-toggle" type="button"></button>
+              <button class="comments__slide-toggle comments__slide-toggle--prev" type="button" title="Предыдущий слайд"></button>
+              <button class="comments__slide-toggle comments__slide-toggle--active" type="button" title="Слайд №1"></button>
+              <button class="comments__slide-toggle" type="button" title="Слайд №2"></button>
+              <button class="comments__slide-toggle" type="button" title="Слайд №3"></button>
+              <button class="comments__slide-toggle comments__slide-toggle--next" type="button" title="Следующий слайд"></button>
           </div>
         </section>
         <section class="proposals">
@@ -202,9 +204,9 @@
               </tr>
             </table>
             <div class="proposals__slide-controls">
-              <button class="proposals__slide-toggle" type="button"></button>
-              <button class="proposals__slide-toggle proposals__slide-toggle--active" type="button"></button>
-              <button class="proposals__slide-toggle" type="button"></button>
+              <button class="proposals__slide-toggle" type="button" title="База"></button>
+              <button class="proposals__slide-toggle proposals__slide-toggle--active" type="button" title="Стандарт"></button>
+              <button class="proposals__slide-toggle" type="button" title="Анлим"></button>
             </div>
           </div>
         </section>
