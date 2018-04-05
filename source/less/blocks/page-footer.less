@@ -115,17 +115,51 @@
   .page-footer__logo,
   .page-footer__social,
   .page-footer__copyright {
+    width: 200px;
     margin-bottom: 0;
   }
 
   .page-footer__logo {
     align-self: flex-start;
     margin-top: 36px;
+    text-align: left;
+  }
+
+  .page-footer__logo-link .page-footer__logo-img {
+    display: inline-block;
+  }
+
+  .page-footer__social {
+    width: 185px;
+  }
+
+  .page-footer__social-link {
+    margin-right: 10px;
+
+    &--last {
+      margin-right: 0;
+    }
+  }
+
+  .page-footer__copyright-link {
+    text-align: right;
+
+    span {
+      display: inline-block;
+      font-size: 14px;
+    }
+
+    .page-footer__copyright-img {
+      display: inline-block;
+      margin-right: -7px;
+      width: 42px;
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
   .page-footer {
-
+    padding: 40px 130px;
+    height: 198px;
   }
 }

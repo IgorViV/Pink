@@ -165,8 +165,10 @@
 
 @media (min-width: @tablet-width) {
   .proposals {
+    padding-top: 88px;
     padding-left: 20px;
     padding-right: 20px;
+    padding-bottom: 32px;
   }
 
   .proposals__table {
@@ -180,13 +182,31 @@
 
   .proposals__cell {
     width: 155px;
+    padding-top: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 9px;
     background-position: center;
+
+    &--hit::before {
+      top: -1px;
+      left: -2px;
+      width: 61px;
+      height: 61px;
+    }
+
+    &--hit::after {
+      transform: translate(5px, 8px) rotate(-45deg);
+    }
 
     &--first {
       display: table-cell;
-      padding: 17px;
+      //padding-top: 5px;
+      //padding-left: 15px;
+      //padding-right: 15px;
+      //padding-bottom: 5px;
       font-size: 14px;
-      line-height: 24px;
+      line-height: 30px;
       text-transform: none;
       background-image: none;
 
@@ -199,8 +219,15 @@
       display: none;
     }
 
-    &--header span {
-      display: inline;
+    &--header {
+      padding: 11px 22px;
+      font-size: 16px;
+      line-height: 28px;
+
+      span {
+        display: inline;
+        font-size: 18px;
+      }
     }
   }
 

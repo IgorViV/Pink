@@ -17,7 +17,7 @@
   order: 2;
   font-weight: 300;
   font-size: 40px;
-  line-height: 50px;
+  line-height: 48px;
   text-transform: none;
   text-align: center;
 }
@@ -26,6 +26,7 @@
   order: 5;
   width: 250px;
   .reset-center();
+  font-weight: 300;
   text-align: center;
   text-transform: none;
 }
@@ -44,7 +45,7 @@
   color: @mobile-color-link;
   background-color: transparent;
   border: 3px solid @white;
-  border-radius: 25px;
+  border-radius: 30px;
 
   &:hover {
     color: @mobile-color-link--hover;
@@ -96,23 +97,36 @@
   .download {
     position: absolute;
     left: 0;
-    top: -525px;
+    top: -528px;
     width: 340px;
     padding-top: 0;
     padding-bottom: 0;
     padding-left: 20px;
     padding-right: 20px;
     background-color: transparent;
+
+    p {
+      order: 5;
+      width: 300px;
+      .reset-center();
+      font-size: 18px;
+    }
   }
 
   .download h3 {
     display: block;
     width: 200px;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
   }
 
   .download__btn {
     width: 300px;
+    margin-bottom: 45px;
+    line-height: 24px;
+  }
+
+  .download__links {
+    margin-bottom: 35px;
   }
 }
 
