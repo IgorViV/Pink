@@ -241,12 +241,56 @@
 }
 
 @media (min-width: @desktop-width) {
+  .proposals {
+    padding-top: 145px;
+    padding-bottom: 55px;
+  }
+
   .proposals__table {
-    width: 960px;
+    width: 940px;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 10px;
-    padding-right: 10px;
+  }
+
+  .proposals__cell {
+    padding-top: 14px;
+    padding-left: 20px;
+    padding-right: 0;
+    padding-bottom: 15px;
+    background-position: center;
+
+    &--hit::before {
+      top: 0;
+      left: 0;
+      width: 73px;
+      height: 73px;
+    }
+
+    &--hit::after {
+      transform: translate(10px, 15px) rotate(-45deg);
+    }
+
+    &--first {
+      font-size: 18px;
+      line-height: 30px;
+      text-transform: none;
+      background-image: none;
+
+      &::after {
+        background-image: none;
+      }
+    }
+
+    &--header {
+      padding: 18px 22px;
+      font-size: 18px;
+      line-height: 30px;
+
+      span {
+        display: inline;
+        font-size: 24px;
+      }
+    }
   }
 }
 

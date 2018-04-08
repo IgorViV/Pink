@@ -17,26 +17,26 @@
   text-transform: none;
   text-align: center;
 
-  .comments__slide-header h3 {
-    .reset-center();
-    margin-bottom: 15px;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 30px;
-    text-transform: none;
-    color: @black;
-  }
-
-  .comments__slide-header span {
-    display: none;
-  }
-
   blockquote {
     margin: 0;
     padding: 0 20px;
     line-height: 28px;
     color: @font-color-base;
   }
+}
+
+.comments__slide-header h3 {
+  .reset-center();
+  margin-bottom: 15px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 30px;
+  text-transform: none;
+  color: @black;
+}
+
+.comments__slide-header span {
+  display: none;
 }
 
 .comments__slide-controls {
@@ -120,26 +120,26 @@
     padding-left: 20px;
     padding-right: 20px;
 
-    .comments__slide-header h3 {
-      .reset-center();
-      margin-bottom: 5px;
-      font-weight: 700;
-      font-size: 20px;
-      line-height: 30px;
-      text-transform: none;
-      color: @black;
-    }
-
-    .comments__slide-header span {
-      display: block;
-    }
-
     blockquote {
       .reset();
       margin-bottom: 35px;
       font-size: 18px;
       line-height: 30px;
     }
+  }
+
+  .comments__slide-header h3 {
+    .reset-center();
+    margin-bottom: 5px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    text-transform: none;
+    color: @black;
+  }
+
+  .comments__slide-header span {
+    display: block;
   }
 }
 
@@ -157,7 +157,7 @@
 
   .comments__slider {
     width: 2840px;
-    padding-top: 190px;
+    padding-top: 145px;
 
   }
 
@@ -172,6 +172,20 @@
     &--3 {
       margin-right: 0;
     }
+  }
+
+  .comments__slide-header h3 {
+    .reset-center();
+    margin-bottom: 5px;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    text-transform: none;
+    color: @black;
+  }
+
+  .comments__slide-header span {
+    font-size: 18px;
   }
 
   .comments__slide-controls {
@@ -211,6 +225,10 @@
     &:active {
       opacity: 0.3;
     }
+  }
+
+  .comments__slide-toggle--prev {
+    margin-left: 10px;
   }
 
   .comments__slide-toggle--next {
