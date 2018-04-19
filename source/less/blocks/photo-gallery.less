@@ -18,4 +18,29 @@
   }
 }
 
+@media (min-width: @tablet-width) {
+  .photo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+  }
 
+  .photo-gallery__header {
+    width: 100%;
+    padding-top: 90px;
+    padding-bottom: 77px;
+    text-align: center;
+
+    p {
+      width: 440px;
+      font-size: 18px;
+    }
+
+    .hidden-tablet {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+
+}
