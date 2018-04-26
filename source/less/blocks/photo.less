@@ -4,7 +4,7 @@
   justify-content: space-between;
   width: 280px;
   .reset-center();
-  margin-bottom: 20px;
+  margin-bottom: 19px;
   padding-bottom: 20px;
   color: #283645;
   background-color: @bg-color-body;
@@ -17,6 +17,7 @@
 .photo__link {
   position: relative;
   .reset();
+  overflow: hidden;
 
   &--full {
     width: 320px;
@@ -49,7 +50,7 @@
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  padding-top: 12px;
+  padding-top: 19px;
   padding-left: 17px;
   padding-right: 17px;
   font-size: 14px;
@@ -59,6 +60,7 @@
 
 .photo__author {
   .reset();
+  margin-bottom: 20;
   font-weight: 700;
 
   span {
@@ -119,41 +121,67 @@
   color: @font-color-link;
 }
 
+.photo--second {
+  padding-bottom: 18px;
+}
+
 @media (min-width: @tablet-width) {
   .photo {
     width: 300px;
-    margin-bottom: 50px;
-    // padding-bottom: 19px;
+    margin-bottom: 20px;
     margin-left: 20px;
     margin-right: 0;
+    padding-bottom: 20px;
   }
 
   .photo--first {
+    width: 620px;
+    margin-bottom: 50px;
+    padding-bottom: 25px;
+  }
+
+  .photo__link {
     width: 100%;
-    margin-left: 20px;
-    margin-right: 20px;
+  }
+
+  .photo__link--full {
+    width: 660px;
+    height: 509px;
+
+    img {
+      height: 509px;
+      object-fit: cover;
+    }
+
+    span {
+      top: 58px;
+    }
   }
 
   .photo__information {
-    display: flex;
-    flex-direction: column;
+    width: 100%;
+    padding-top: 25px;
+    padding-left: 28px;
+    padding-right: 28px;
   }
 
   .photo__quote {
-
+    margin-top: -2px;
+    margin-bottom: 15px;
   }
 
   .photo__likes {
     svg {
       order: 3;
       margin-left: auto;
-      margin-right: 11px;
+      margin-right: 4px;
     }
   }
 
   .photo__information--first {
     flex-direction: row;
     flex-wrap: wrap;
+    align-items: center;
 
     .photo__author {
       order: 1;
@@ -162,16 +190,32 @@
     .photo__quote {
       order: 3;
       width: 100%;
+      margin-top: -2px;
+      margin-bottom: 0;
     }
 
     .photo__likes {
       order: 2;
-      width: 150px;
+      width: auto;
       margin-left: auto;
+
+      svg {
+        margin-left: 19px;
+        margin-right: 0;
+      }
+    }
+  }
+
+  .photo--last {
+    .photo__quote {
+      margin-bottom: 37px;
     }
   }
 }
 
 @media (min-width: @desktop-width) {
-
+  .photo__link--full {
+    width: 1200px;
+    // margin-left: -125px;
+  }
 }

@@ -3,10 +3,10 @@
 }
 
 .photo-post__header {
-  padding-top: 25px;
+  padding-top: 18px;
   padding-left: 20px;
   padding-right: 20px;
-  padding-bottom: 40px;
+  padding-bottom: 42px;
   font-weight: 400;
   font-size: 14px;
   line-height: 30px;
@@ -37,7 +37,6 @@
 }
 
 .photo-post__control {
-  padding-top: 0;
   padding-top: 42px;
   padding-left: 20px;
   padding-right: 20px;
@@ -182,4 +181,209 @@
     color: rgba(255, 255, 255, 0.3);
     background-color: #b5b9be;
   }
+}
+
+@media (min-width: @tablet-width) {
+  .photo-post {
+    position: relative;
+  }
+
+  .photo-post__header {
+    padding-top: 28px;
+    // padding-left: 20px;
+    // padding-right: 20px;
+    padding-bottom: 67px;
+    // font-weight: 400;
+    font-size: 18px;
+    // line-height: 30px;
+    // text-align: center;
+    // text-transform: none;
+    // color: #283645;
+    // background-color: @white;
+  }
+
+  .photo-post__change {
+    display: flex;
+    padding-top: 42px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 53px;
+    // border-bottom: 1px solid #dddfe0;
+    // border: 1px solid red;
+  }
+
+  .photo-post__link-image {
+    width: 300px;
+    height: 400px;
+    margin-top: 16px;
+    // border: 1px solid green;
+    overflow: hidden;
+
+    img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      // border: 1px solid red;
+    }
+  }
+
+  .photo-post__control {
+    position: relative;
+    width: 300px;
+    margin-left: 20px;
+    padding-top: 0px;
+    padding-left: 25px;
+    padding-right: 0px;
+    padding-bottom: 10px;
+    // border: 1px solid yellow;
+  }
+
+  .photo-post__button-wrapper {
+    position: absolute;
+    flex-direction: column;
+    top: 23px;
+    margin-bottom: 0px;
+    // border: 1px solid blue;
+  }
+
+  .photo-post__button {
+    .reset();
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    // border: 1px solid yellowgreen;
+  }
+
+  .photo-post__button--cut {
+    .reset();
+    // margin-left: 36px;
+    // margin-right: 35px;
+    margin-bottom: 42px;
+  }
+
+  .photo-post__button--saturation {
+    .reset();
+    // margin-right: 40px;
+    margin-bottom: 37px;
+    margin-left: 2px;
+
+    .photo-post__button-icon {
+      width: 25px;
+      height: 22px;
+    }
+  }
+
+  .photo-post__button--contrast {
+    .reset();
+    // margin-right: 45px;
+    margin-left: 2px;
+
+    .photo-post__button-icon {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  .photo-post__button-icon {
+    width: 22px;
+    height: 22px;
+    fill: @icon-color--active;
+  }
+
+  // .photo-post__button:hover {
+  //   .photo-post__button-icon {
+  //     fill: @icon-color--hover;
+  //   }
+  // }
+
+  // .photo-post__button:active {
+  //   .photo-post__button-icon {
+  //     fill: @icon-color--active;
+  //   }
+  // }
+
+  // .photo-post__button--active,
+  // .photo-post__button--active:hover {
+  //   .photo-post__button-icon {
+  //     fill: @icon-color--active;
+  //   }
+  // }
+
+  .photo-post__range {
+    display: block;
+    height: 72px;
+    border-bottom: 1px solid #cccccc;
+  }
+
+  .photo-post__range,
+  .photo-post__range--active {
+    &::before {
+      position: absolute;
+      content: "";
+      top: 34px;
+      left: 56px;
+      right: 18px;
+      height: 2px;
+      background-color: #283645;
+      z-index: 10;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      top: 34px;
+      right: 51px;
+      width: 14px;
+      height: 14px;
+      background-color: @white;
+      border: 2px solid @range-color;
+      border-radius: 50%;
+      z-index: 11;
+      transform: translateY(-6px);
+      cursor: pointer;
+    }
+
+    &:active::after {
+      background-color: @range-color--active;
+    }
+  }
+
+  .photo-post__range--cut {
+    &::after {
+      right: 58px;
+    }
+  }
+
+  .photo-post__range--saturation {
+    &::after {
+      right: 180px;
+    }
+  }
+
+  .photo-post__range--contrast {
+    &::after {
+      right: 108px;
+    }
+  }
+
+  .photo-post__footer {
+    position: absolute;
+    bottom: 55px;
+    right: 15px;
+    width: 300px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .photo-post__footer-button {
+    width: 260px;
+  }
+
+  .photo-post__footer-button--upload {
+    margin-bottom: 26px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+
 }
