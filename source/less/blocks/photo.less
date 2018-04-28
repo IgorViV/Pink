@@ -214,8 +214,37 @@
 }
 
 @media (min-width: @desktop-width) {
+  .photo {
+    margin-bottom: 54px;
+    margin-left: 0px;
+    margin-right: 20px;
+  }
+
+  .photo--first {
+    width: 940px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 50px;
+  }
+
+  .photo--four,
+  .photo--last {
+    margin-right: 0px;
+  }
+
   .photo__link--full {
     width: 1200px;
-    // margin-left: -125px;
+    height: 506px;
+    margin-left: -130px;
+
+    img {
+      height: 506px;
+      object-fit: cover;
+    }
+
+    span {
+      top: 55px;
+      right: 130px;
+    }
   }
 }
