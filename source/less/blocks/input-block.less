@@ -25,7 +25,7 @@
   input {
     .reset();
     padding-top: 15px;
-    padding-left: 23px;
+    padding-left: 21px;
     padding-bottom: 13px;
     font-size: 18px;
     line-height: 30px;
@@ -33,33 +33,100 @@
   }
 }
 
+.input-block__item--last {
+  margin-bottom: 0;
+}
+
 .input-block--progress {
 
 }
 
 .input-block__item--progress {
-  label {
-    // .reset();
-    // margin-bottom: 5px;
-    // padding-left: 23px;
-    font-size: 18px;
-    // line-height: 30px;
-    // font-family: @font-family-base;
-    text-transform: none;
-    color: #283645;
-  }
+  margin-bottom: 52px;
 
-  input {
-    display: none;
-    // .reset();
-    // padding-top: 15px;
-    // padding-left: 23px;
-    // padding-bottom: 13px;
-    // font-size: 18px;
-    // line-height: 30px;
-    // font-family: @font-family-base;
-
+  &:last-child {
+    margin-bottom: 0;
   }
+}
+
+.input-block--progress .input-block__label--progress {
+  margin-bottom: 0;
+  padding-left: 70px;
+  font-size: 18px;
+  text-transform: none;
+  color: #283645;
+
+  span {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: -70px;
+      width: 40px;
+      height: 39px;
+      background-color: @white;
+      border: 2px solid #e5e5e5;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.input-block__input--progress,
+.input-block__input--applications {
+  display: none;
+}
+
+.input-block__input--progress:checked + span::before {
+  background-image: url(../img/checkbox.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.input-block--applications .input-block__label--applications {
+  margin-bottom: 0;
+  padding-left: 70px;
+  font-size: 18px;
+  text-transform: none;
+  color: #283645;
+
+  span {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: -70px;
+      width: 39px;
+      height: 39px;
+      background-color: @white;
+      border: 2px solid #e5e5e5;
+      border-radius: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.input-block__item--applications {
+  margin-bottom: 45px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.input-block__input--applications:checked + span::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -58px;
+  width: 15px;
+  height: 15px;
+  background-color: @pink;
+  border-radius: 50%;
+  transform: translateY(-50%);
 }
 
 @media (min-width: @tablet-width) {

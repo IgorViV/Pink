@@ -76,7 +76,7 @@
             <span class="visually-hidden">
               Меню
             </span>
-            <svg class="nav-toggle__icon nav-toggle__icon--menu" version="1.0" id="icon-menu-burger" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="49.945px" height="24.007px" viewBox="0 0 49.945 24.007" enable-background="new 0 0 49.945 24.007" xml:space="preserve">
+            <svg class="nav-toggle__icon nav-toggle__icon--menu" id="icon-menu-burger" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="49.945px" height="24.007px" viewBox="0 0 49.945 24.007" enable-background="new 0 0 49.945 24.007" xml:space="preserve">
               <g id="miu">
                 <g id="editor_list_view_hambuger_menu_glyph">
                   <g>
@@ -88,7 +88,7 @@
                 </g>
               </g>
             </svg>
-            <svg class="nav-toggle__icon nav-toggle__icon--close" version="1.0" id="icon-menu-cross" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="23.867px" height="23.867px" viewBox="0 0 23.867 23.867" enable-background="new 0 0 23.867 23.867" xml:space="preserve">
+            <svg class="nav-toggle__icon nav-toggle__icon--close" id="icon-menu-cross" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="23.867px" height="23.867px" viewBox="0 0 23.867 23.867" enable-background="new 0 0 23.867 23.867" xml:space="preserve">
               <path d="M15.087,11.933l8.56-8.559c0.293-0.293,0.293-0.768,0-1.061L21.554,0.22C21.414,0.079,21.223,0,21.023,0 c-0.199,0-0.391,0.079-0.529,0.22l-8.561,8.56l-8.56-8.56c-0.282-0.282-0.78-0.282-1.061,0L0.22,2.313 c-0.293,0.293-0.293,0.768,0,1.061l8.56,8.559l-8.56,8.559c-0.293,0.293-0.293,0.768,0,1.062l2.093,2.094 c0.141,0.142,0.331,0.22,0.53,0.22c0.199,0,0.39-0.078,0.53-0.22l8.561-8.56l8.56,8.56c0.141,0.142,0.332,0.22,0.53,0.22 c0.199,0,0.39-0.078,0.53-0.22l2.093-2.094c0.293-0.294,0.293-0.769,0-1.062L15.087,11.933z"/>
             </svg>
           </button>
@@ -107,8 +107,8 @@
           </header>
           <form class="form" name="form" method="POST" action="https://echo.htmlacademy.ru">
             <fieldset class="form-group form-group--initial">
-              <legend class="form-group__title">
-                <span class="visually-hidden">
+              <legend class="form-group__title visually-hidden">
+                <span>
                   Представьтесь:
                 </span>
               </legend>
@@ -121,97 +121,97 @@
                   <label for="first-name">Имя:</label>
                   <input type="text" id="first-name" required placeholder="Введите Ваше имя*">
                 </li>
-                <li class="input-block__item">
-                  <label for="last-name">Отчество:</label>
-                  <input type="text" id="last-name" required placeholder="Ну и отчество тоже">
+                <li class="input-block__item input-block__item--last">
+                  <label for="patronymic-name">Отчество:</label>
+                  <input type="text" id="patronymic-name" required placeholder="Ну и отчество тоже">
                 </li>
               </ul>
             </fieldset>
             <fieldset class="form-group form-group--progress">
               <legend class="form-group__title">
                 <span>
-                  Ваши безбашенные достижения в путешествии
+                  Ваши безбашенные<br> достижения в путешествии
                 </span>
               </legend>
               <ul class="input-block input-block--progress">
                 <li class="input-block__item input-block__item--progress">
-                  <label>
-                      <input type="checkbox" name="progress" value="selfie with a shark" checked>
-                      Сделал селфи с акулой
+                  <label class="input-block__label input-block__label--progress">
+                    <input class="input-block__input input-block__input--progress" type="checkbox" name="progress" value="selfie with a shark" checked>
+                    <span>Сделал селфи с акулой</span>
                   </label>
                 </li>
                 <li class="input-block__item input-block__item--progress">
-                  <label>
-                    <input type="checkbox" name="progress" value="burnt on the beach" checked>
-                    Обгорел на пляже
+                  <label class="input-block__label input-block__label--progress">
+                    <input class="input-block__input input-block__input--progress" type="checkbox" name="progress" value="burnt on the beach" checked>
+                    <span>Обгорел на пляже</span>
                   </label>
                 </li>
                 <li class="input-block__item input-block__item--progress">
-                  <label>
-                    <input type="checkbox" name="progress" value="Chuck Norris saw">
-                    Видел Чака Норриса
+                  <label class="input-block__label input-block__label--progress">
+                    <input class="input-block__input input-block__input--progress" type="checkbox" name="progress" value="Chuck Norris saw">
+                    <span>Видел Чака Норриса</span>
                   </label>
                 </li>
                 <li class="input-block__item input-block__item--progress">
-                  <label>
-                    <input type="checkbox" name="progress" value="bought souvenirs">
-                    Накупил сувениров
+                  <label class="input-block__label input-block__label--progress">
+                    <input class="input-block__input input-block__input--progress" type="checkbox" name="progress" value="bought souvenirs">
+                    <span>Накупил сувениров</span>
                   </label>
                 </li>
                 <li class="input-block__item input-block__item--progress">
-                  <label>
-                    <input type="checkbox" name="progress" value="held the tower" checked>
-                    Удержал башню
+                  <label class="input-block__label input-block__label--progress">
+                    <input class="input-block__input input-block__input--progress" type="checkbox" name="progress" value="held the tower" checked>
+                    <span>Удержал башню</span>
                   </label>
                 </li>
                 <li class="input-block__item input-block__item--progress">
-                  <label>
-                    <input type="checkbox" name="progress" value="trashed the hotel">
-                    Разгромил отель
+                  <label class="input-block__label input-block__label--progress">
+                    <input class="input-block__input input-block__input--progress" type="checkbox" name="progress" value="trashed the hotel">
+                    <span>Разгромил отель</span>
                   </label>
                 </li>
               </ul>
             </fieldset>
             <fieldset class="form-group form-group--contacts">
-              <legend class="form-group__title">
-                <span class="visually-hidden">
+              <legend class="form-group__title visually-hidden">
+                <span>
                   Ваши контакты:
                 </span>
               </legend>
-              <ul class="input-block">
-                <li class="input-block__item">
-                  <label for="phone">Номер телефона</label>
-                  <input type="tel" id="phone" name="phone" placeholder="Номер, пожайлуста">
+              <ul class="input-block input-block--contacts">
+                <li class="input-block__item input-block__item--contacts">
+                  <label class="input-block__label input-block__label--contacts" for="phone">Номер телефона</label>
+                  <input class="input-block__input input-block__input--contacts" type="tel" id="phone" name="phone" placeholder="Номер, пожайлуста">
                 </li>
-                <li class="input-block__item">
-                  <label for="email">Адрес почты</label>
-                  <input type="email" id="email" name="email" required placeholder="Введите почту*">
+                <li class="input-block__item input-block__item--contacts">
+                  <label class="input-block__label input-block__label--contacts" for="email">Адрес почты</label>
+                  <input class="input-block__input input-block__input--contacts" type="email" id="email" name="email" required placeholder="Введите почту*">
                 </li>
               </ul>
             </fieldset>
             <fieldset class="form-group form-group--applications">
               <legend class="form-group__title">
                 <span>
-                  С каким приложением путешествовали?
+                  С каким приложением<br> путешествовали?
                 </span>
               </legend>
-              <ul class="input-block">
-                <li class="input-block__item">
-                  <label>
-                    <input type="radio" name="application" value="ios" checked>
-                    Pink для iOS
+              <ul class="input-block input-block--applications">
+                <li class="input-block__item input-block__item--applications">
+                  <label class="input-block__label input-block__label--applications">
+                    <input class="input-block__input input-block__input--applications" type="radio" name="application" value="ios" checked>
+                    <span>Pink для iOS</span>
                   </label>
                 </li>
-                <li class="input-block__item">
-                  <label>
-                    <input type="radio" name="application" value="android">
-                    Pink на Android
+                <li class="input-block__item input-block__item--applications">
+                  <label class="input-block__label input-block__label--applications">
+                    <input class="input-block__input input-block__input--applications" type="radio" name="application" value="android">
+                    <span>Pink на Android</span>
                   </label>
                 </li>
-                <li class="input-block__item">
-                  <label>
-                    <input type="radio" name="application" value="windows">
-                    Windows Phone
+                <li class="input-block__item input-block__item--applications">
+                  <label class="input-block__label input-block__label--applications">
+                    <input class="input-block__input input-block__input--applications" type="radio" name="application" value="windows">
+                    <span>Windows Phone</span>
                   </label>
                 </li>
               </ul>
@@ -229,7 +229,7 @@
                 Отправить форму
               </button>
               <span>
-                * — обязательные поля
+                <span>*</span> — обязательные поля
               </span>
             </div>
           </form>
