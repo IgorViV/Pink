@@ -102,7 +102,8 @@
           <header class="questionnaire__header">
             <h2 class="visually-hidden">Форма для участия в конкурсе</h2>
             <p>
-              Поделитесь своей историей и получите шанс выиграть ценный приз &#8212; 1000 миль на Вашу бонусную карту!
+              Поделитесь своей историей и получите шанс выиграть ценный приз &#8212; 1000 миль на вашу бонусную карту!<br>
+              <span>Пожалуйста, заполните форму ниже:</span>
             </p>
           </header>
           <form class="form" name="form" method="POST" action="https://echo.htmlacademy.ru">
@@ -112,25 +113,25 @@
                   Представьтесь:
                 </span>
               </legend>
-              <ul class="input-block">
-                <li class="input-block__item">
-                  <label for="last-name">Фамилия:</label>
-                  <input type="text" id="last-name" required placeholder="Укажите фамилию*">
+              <ul class="input-block input-block--initial">
+                <li class="input-block__item input-block__item--initial">
+                  <label class="input-block__label input-block__label--initial" for="last-name">Фамилия:</label>
+                  <input class="input-block__input input-block__input--initial" type="text" id="last-name" required placeholder="Укажите фамилию *">
                 </li>
-                <li class="input-block__item">
-                  <label for="first-name">Имя:</label>
-                  <input type="text" id="first-name" required placeholder="Введите ваше имя*">
+                <li class="input-block__item input-block__item--initial">
+                  <label class="input-block__label input-block__label--initial" for="first-name">Имя:</label>
+                  <input class="input-block__input input-block__input--initial" type="text" id="first-name" required placeholder="Введите ваше имя *">
                 </li>
-                <li class="input-block__item input-block__item--last">
-                  <label for="patronymic-name">Отчество:</label>
-                  <input type="text" id="patronymic-name" required placeholder="Ну и отчество тоже">
+                <li class="input-block__item input-block__item--initial input-block__item--initial-last">
+                  <label class="input-block__label input-block__label--initial" for="patronymic-name">Отчество:</label>
+                  <input class="input-block__input input-block__input--initial" type="text" id="patronymic-name" required placeholder="Ну и отчество тоже">
                 </li>
               </ul>
             </fieldset>
             <fieldset class="form-group form-group--progress">
               <legend class="form-group__title">
                 <span>
-                  Ваши безбашенные<br> достижения в путешествии
+                  Ваши безбашенные<br class="transfer"> достижения в путешествии
                 </span>
               </legend>
               <ul class="input-block input-block--progress">
@@ -173,9 +174,9 @@
               </ul>
             </fieldset>
             <fieldset class="form-group form-group--contacts">
-              <legend class="form-group__title visually-hidden">
+              <legend class="form-group__title">
                 <span>
-                  Ваши контакты:
+                  Контактная информация
                 </span>
               </legend>
               <ul class="input-block input-block--contacts">
@@ -183,16 +184,16 @@
                   <label class="input-block__label input-block__label--contacts" for="phone">Номер телефона</label>
                   <input class="input-block__input input-block__input--contacts" type="tel" id="phone" name="phone" placeholder="Номер, пожалуйста">
                 </li>
-                <li class="input-block__item input-block__item--contacts">
+                <li class="input-block__item input-block__item--contacts input-block__item--contacts-last">
                   <label class="input-block__label input-block__label--contacts" for="email">Адрес почты</label>
-                  <input class="input-block__input input-block__input--contacts" type="email" id="email" name="email" required placeholder="Введите почту*">
+                  <input class="input-block__input input-block__input--contacts input-block__input--contacts-email" type="email" id="email" name="email" required placeholder="Введите почту *">
                 </li>
               </ul>
             </fieldset>
             <fieldset class="form-group form-group--applications">
               <legend class="form-group__title">
                 <span>
-                  С каким приложением<br> путешествовали?
+                  С каким приложением<br class="transfer"> путешествовали?
                 </span>
               </legend>
               <ul class="input-block input-block--applications">

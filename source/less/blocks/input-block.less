@@ -11,29 +11,31 @@
   flex-direction: column;
   .reset();
   margin-bottom: 18px;
-
-  label {
-    .reset();
-    margin-bottom: 5px;
-    padding-left: 23px;
-    font-size: 14px;
-    line-height: 30px;
-    font-family: @font-family-base;
-    color: @label-color;
-  }
-
-  input {
-    .reset();
-    padding-top: 15px;
-    padding-left: 21px;
-    padding-bottom: 13px;
-    font-size: 18px;
-    line-height: 30px;
-    font-family: @font-family-base;
-  }
 }
 
-.input-block__item--last {
+.input-block__label {
+  .reset();
+  margin-bottom: 5px;
+  padding-left: 23px;
+  font-size: 14px;
+  line-height: 30px;
+  font-family: @font-family-base;
+  color: @label-color;
+}
+
+.input-block__input {
+  .reset();
+  padding-top: 15px;
+  padding-left: 21px;
+  padding-bottom: 13px;
+  font-size: 18px;
+  line-height: 30px;
+  font-family: @font-family-base;
+  border: none;
+  border: 2px solid #e5e5e5;
+}
+
+.input-block__item--initial-last {
   margin-bottom: 0;
 }
 
@@ -49,7 +51,7 @@
   }
 }
 
-.input-block--progress .input-block__label--progress {
+.input-block__label--progress {
   margin-bottom: 0;
   padding-left: 70px;
   font-size: 18px;
@@ -84,7 +86,7 @@
   background-position: center;
 }
 
-.input-block--applications .input-block__label--applications {
+.input-block__label--applications {
   margin-bottom: 0;
   padding-left: 70px;
   font-size: 18px;
@@ -130,7 +132,96 @@
 }
 
 @media (min-width: @tablet-width) {
+  .input-block--initial {
+    padding-top: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
 
+  .input-block__item--initial {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 52px;
+  }
+
+  .input-block__item--initial-last {
+    margin-bottom: 0;
+  }
+
+  .input-block__label--initial {
+    margin-right: 20px;
+    margin-bottom: 0;
+    padding-left: 0;
+  }
+
+  .input-block__input--initial {
+    flex-grow: 1;
+    margin-right: 0;
+    margin-bottom: 0;
+    padding-left: 19px;
+  }
+
+  .input-block--applications {
+    padding-top: 0;
+  }
+
+  .input-block__label--applications {
+    padding-left: 60px;
+
+    span::before {
+      left: -60px;
+    }
+  }
+
+  .input-block__input--applications:checked + span::after {
+    left: -48px;
+  }
+
+  .input-block--contacts {
+    padding-top: 0;
+  }
+
+  .input-block__item--contacts {
+    margin-bottom: 30px;
+  }
+
+  .input-block__item--contacts-last {
+    margin-bottom: 0;
+  }
+
+  .input-block__label--contacts {
+    position: relative;
+    margin-bottom: 0;
+    padding-left: 20px;
+  }
+
+  .input-block__input--contacts {
+    position: relative;
+    order: -1;
+    margin-bottom: 10px;
+    padding-top: 13px;
+    padding-left: 18px;
+    padding-bottom: 15px;
+    background-image: url(../img/phone.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+  }
+
+  .input-block__input--contacts-email {
+    background-image: url(../img/mail.png);
+  }
+
+  .input-block--progress {
+    padding-top: 0;
+  }
+
+  .input-block__label--progress {
+    padding-left: 60px;
+
+    span::before {
+      left: -60px;
+    }
+  }
 }
 
 @media (min-width: @desktop-width) {
