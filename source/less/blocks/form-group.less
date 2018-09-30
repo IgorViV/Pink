@@ -109,11 +109,15 @@
       color: @pink;
     }
   }
+
+  .form__footer-span-desktop {
+    display: none;
+    color: #283645;
+  }
 }
 
 @media (min-width: @tablet-width) {
   .form-group {
-    // .reset();
     padding-top: 0;
     padding-left: 0;
     padding-right: 0;
@@ -239,11 +243,88 @@
 }
 
 @media (min-width: @desktop-width) {
-  .form-group {
-    padding-top: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 10px;
-    border: none;
+  .form-group--initial {
+    width: 434px;
+    .reset();
+    margin-top: 35px;
   }
+
+  .form-group--applications {
+    width: 434px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: 0;
+    padding-top: 10px;
+    padding-left: 0;
+    padding-bottom: 58px;
+  }
+
+  .form-group--contacts {
+    width: 940px;
+    margin: 0;
+    margin-bottom: 58px;
+    padding-top: 35px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 13px;
+  }
+
+  .form-group--progress,
+  .form-group--emotions {
+    width: 940px;
+    margin: 0;
+  }
+
+  .form-group--progress {
+    padding-top: 49px;
+    padding-left: 59px;
+    padding-right: 59px;
+    padding-bottom: 60px;
+    margin-bottom: 58px;
+  }
+
+  .form-group--emotions {
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 66px;
+    padding-top: 34px;
+    padding-left: 58px;
+    padding-right: 58px;
+    padding-bottom: 35px;
+
+    textarea {
+      width: 820px;
+      height: 128px;
+      padding: 15px 19px;
+      border: none;
+      border: 2px solid #e5e5e5;
+    }
+  }
+
+  .form__footer {
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 0;
+    padding-bottom: 0;
+
+    button {
+      width: 300px;
+      .reset();
+      margin-left: 0;
+    }
+
+    span {
+      .reset();
+      width: 318px;
+      margin-left: auto;
+      margin-right: 0;
+      padding-left: 3px;
+
+      .form__footer-span-desktop {
+        display: inline;
+      }
+    }
+  }
+
+  
 }

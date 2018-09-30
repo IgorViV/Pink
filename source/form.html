@@ -102,7 +102,7 @@
           <header class="questionnaire__header">
             <h2 class="visually-hidden">Форма для участия в конкурсе</h2>
             <p>
-              Поделитесь своей историей и получите шанс выиграть ценный приз &#8212; 1000 миль на вашу бонусную карту!<br>
+              Поделитесь своей историей и получите шанс выиграть ценный приз &#8212; 1000 миль на вашу бонусную карту!<br class="transfer">
               <span>Пожалуйста, заполните форму ниже:</span>
             </p>
           </header>
@@ -118,7 +118,7 @@
                   <label class="input-block__label input-block__label--initial" for="last-name">Фамилия:</label>
                   <input class="input-block__input input-block__input--initial" type="text" id="last-name" required placeholder="Укажите фамилию *">
                 </li>
-                <li class="input-block__item input-block__item--initial">
+                <li class="input-block__item input-block__item--initial input-block__item--initial-first-name">
                   <label class="input-block__label input-block__label--initial" for="first-name">Имя:</label>
                   <input class="input-block__input input-block__input--initial" type="text" id="first-name" required placeholder="Введите ваше имя *">
                 </li>
@@ -135,37 +135,37 @@
                 </span>
               </legend>
               <ul class="input-block input-block--progress">
-                <li class="input-block__item input-block__item--progress">
+                <li class="input-block__item input-block__item--progress input-block__item--progress-selfie">
                   <label class="input-block__label input-block__label--progress">
                     <input class="input-block__input input-block__input--progress" type="checkbox" name="progress" value="selfie with a shark" checked>
                     <span>Сделал селфи с акулой</span>
                   </label>
                 </li>
-                <li class="input-block__item input-block__item--progress">
+                <li class="input-block__item input-block__item--progress input-block__item--progress-beach">
                   <label class="input-block__label input-block__label--progress">
                     <input class="input-block__input input-block__input--progress" type="checkbox" name="progress" value="burnt on the beach" checked>
                     <span>Обгорел на пляже</span>
                   </label>
                 </li>
-                <li class="input-block__item input-block__item--progress">
+                <li class="input-block__item input-block__item--progress input-block__item--progress-chuck">
                   <label class="input-block__label input-block__label--progress">
                     <input class="input-block__input input-block__input--progress" type="checkbox" name="progress" value="Chuck Norris saw">
                     <span>Видел Чака Норриса</span>
                   </label>
                 </li>
-                <li class="input-block__item input-block__item--progress">
+                <li class="input-block__item input-block__item--progress input-block__item--progress-souvenirs">
                   <label class="input-block__label input-block__label--progress">
                     <input class="input-block__input input-block__input--progress" type="checkbox" name="progress" value="bought souvenirs">
                     <span>Накупил сувениров</span>
                   </label>
                 </li>
-                <li class="input-block__item input-block__item--progress">
+                <li class="input-block__item input-block__item--progress input-block__item--progress-tower">
                   <label class="input-block__label input-block__label--progress">
                     <input class="input-block__input input-block__input--progress" type="checkbox" name="progress" value="held the tower" checked>
                     <span>Удержал башню</span>
                   </label>
                 </li>
-                <li class="input-block__item input-block__item--progress">
+                <li class="input-block__item input-block__item--progress input-block__item--progress-hotel">
                   <label class="input-block__label input-block__label--progress">
                     <input class="input-block__input input-block__input--progress" type="checkbox" name="progress" value="trashed the hotel">
                     <span>Разгромил отель</span>
@@ -230,7 +230,7 @@
                 Отправить форму
               </button>
               <span>
-                <span>*</span> — обязательные поля
+                <span>*</span> — обязательные <span class="form__footer-span-desktop">для заполнения</span> поля
               </span>
             </div>
           </form>

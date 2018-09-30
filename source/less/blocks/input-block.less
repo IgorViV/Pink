@@ -225,5 +225,81 @@
 }
 
 @media (min-width: @desktop-width) {
+  .input-block--initial {
+    padding-left: 0;
+    padding-right: 0;
+  }
 
+  .input-block__item--initial {
+    margin-bottom: 55px;
+  }
+
+  .input-block__item--initial-first-name {
+    margin-bottom: 52px;
+  }
+
+  .input-block--applications {
+    align-items: flex-start;
+    margin-top: 40px;
+    margin-left: 73px;
+  }
+
+  .input-block--contacts {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .input-block__item--contacts {
+    width: 375px;
+    margin-left: 60px;
+    margin-bottom: 0;
+  }
+
+  .input-block__item--contacts-last {
+    margin-left: 0;
+    margin-right: 60px;
+  }
+
+  .input-block--progress {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .input-block__item--progress {
+    width: 260px;
+    .reset();
+  }
+
+  .input-block__item--progress-selfie {
+    order: 1;
+    margin-bottom: 51px;
+    width: 260px;
+  }
+
+  .input-block__item--progress-beach {
+    order: 4;
+  }
+
+  .input-block__item--progress-chuck {
+    order: 2;
+    width: 246px;
+  }
+
+  .input-block__item--progress-souvenirs {
+    order: 5;
+    width: 246px;
+  }
+
+  .input-block__item--progress-tower {
+    order: 3;
+    width: 211px;
+  }
+
+  .input-block__item--progress-hotel {
+    order: 6;
+    width: 211px;
+  }
 }
