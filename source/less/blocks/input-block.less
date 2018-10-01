@@ -1,0 +1,305 @@
+.input-block {
+  display: flex;
+  flex-direction: column;
+  .reset();
+  padding-top: 5px;
+  list-style: none;
+}
+
+.input-block__item {
+  display: flex;
+  flex-direction: column;
+  .reset();
+  margin-bottom: 18px;
+}
+
+.input-block__label {
+  .reset();
+  margin-bottom: 5px;
+  padding-left: 23px;
+  font-size: 14px;
+  line-height: 30px;
+  font-family: @font-family-base;
+  color: @label-color;
+}
+
+.input-block__input {
+  .reset();
+  padding-top: 15px;
+  padding-left: 21px;
+  padding-bottom: 13px;
+  font-size: 18px;
+  line-height: 30px;
+  font-family: @font-family-base;
+  border: none;
+  border: 2px solid #e5e5e5;
+}
+
+.input-block__item--initial-last {
+  margin-bottom: 0;
+}
+
+.input-block--progress {
+
+}
+
+.input-block__item--progress {
+  margin-bottom: 52px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.input-block__label--progress {
+  margin-bottom: 0;
+  padding-left: 70px;
+  font-size: 18px;
+  text-transform: none;
+  color: #283645;
+
+  span {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: -70px;
+      width: 40px;
+      height: 39px;
+      background-color: @white;
+      border: 2px solid #e5e5e5;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.input-block__input--progress,
+.input-block__input--applications {
+  display: none;
+}
+
+.input-block__input--progress:checked + span::before {
+  background-image: url(../img/checkbox.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.input-block__label--applications {
+  margin-bottom: 0;
+  padding-left: 70px;
+  font-size: 18px;
+  text-transform: none;
+  color: #283645;
+
+  span {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: -70px;
+      width: 39px;
+      height: 39px;
+      background-color: @white;
+      border: 2px solid #e5e5e5;
+      border-radius: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
+
+.input-block__item--applications {
+  margin-bottom: 45px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.input-block__input--applications:checked + span::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -58px;
+  width: 15px;
+  height: 15px;
+  background-color: @pink;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+
+@media (min-width: @tablet-width) {
+  .input-block--initial {
+    padding-top: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .input-block__item--initial {
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 52px;
+  }
+
+  .input-block__item--initial-last {
+    margin-bottom: 0;
+  }
+
+  .input-block__label--initial {
+    margin-right: 20px;
+    margin-bottom: 0;
+    padding-left: 0;
+  }
+
+  .input-block__input--initial {
+    flex-grow: 1;
+    margin-right: 0;
+    margin-bottom: 0;
+    padding-left: 19px;
+  }
+
+  .input-block--applications {
+    padding-top: 0;
+  }
+
+  .input-block__label--applications {
+    padding-left: 60px;
+
+    span::before {
+      left: -60px;
+    }
+  }
+
+  .input-block__input--applications:checked + span::after {
+    left: -48px;
+  }
+
+  .input-block--contacts {
+    padding-top: 0;
+  }
+
+  .input-block__item--contacts {
+    margin-bottom: 30px;
+  }
+
+  .input-block__item--contacts-last {
+    margin-bottom: 0;
+  }
+
+  .input-block__label--contacts {
+    position: relative;
+    margin-bottom: 0;
+    padding-left: 20px;
+  }
+
+  .input-block__input--contacts {
+    position: relative;
+    order: -1;
+    margin-bottom: 10px;
+    padding-top: 13px;
+    padding-left: 18px;
+    padding-bottom: 15px;
+    background-image: url(../img/phone.png);
+    background-repeat: no-repeat;
+    background-position: right center;
+  }
+
+  .input-block__input--contacts-email {
+    background-image: url(../img/mail.png);
+  }
+
+  .input-block--progress {
+    padding-top: 0;
+  }
+
+  .input-block__label--progress {
+    padding-left: 60px;
+
+    span::before {
+      left: -60px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .input-block--initial {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .input-block__item--initial {
+    margin-bottom: 55px;
+  }
+
+  .input-block__item--initial-first-name {
+    margin-bottom: 52px;
+  }
+
+  .input-block--applications {
+    align-items: flex-start;
+    margin-top: 40px;
+    margin-left: 73px;
+  }
+
+  .input-block--contacts {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .input-block__item--contacts {
+    width: 375px;
+    margin-left: 60px;
+    margin-bottom: 0;
+  }
+
+  .input-block__item--contacts-last {
+    margin-left: 0;
+    margin-right: 60px;
+  }
+
+  .input-block--progress {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .input-block__item--progress {
+    width: 260px;
+    .reset();
+  }
+
+  .input-block__item--progress-selfie {
+    order: 1;
+    margin-bottom: 51px;
+    width: 260px;
+  }
+
+  .input-block__item--progress-beach {
+    order: 4;
+  }
+
+  .input-block__item--progress-chuck {
+    order: 2;
+    width: 246px;
+  }
+
+  .input-block__item--progress-souvenirs {
+    order: 5;
+    width: 246px;
+  }
+
+  .input-block__item--progress-tower {
+    order: 3;
+    width: 211px;
+  }
+
+  .input-block__item--progress-hotel {
+    order: 6;
+    width: 211px;
+  }
+}
