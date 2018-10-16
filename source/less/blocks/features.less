@@ -48,6 +48,7 @@
   .reset-center();
   margin-bottom: 13px;
   font-weight: @font-weight-bold;
+  font-size: 18px;
   color: @black;
 
   br {
@@ -64,6 +65,10 @@
 }
 
 .features__footer {
+  display: none;
+}
+
+.transfer--desktop {
   display: none;
 }
 
@@ -148,8 +153,9 @@
     }
 
     a {
-      text-decoration: underline;
+      text-decoration: none;
       color: @font-color-link;
+      border-bottom: 1px solid @pink;
 
       &:hover {
         color: @font-color-link--hover;
@@ -165,7 +171,7 @@
 @media (min-width: @desktop-width) {
   .features__header {
     padding-top: 68px;
-    padding-bottom: 78px;
+    padding-bottom: 75px;
   }
 
   .features__text {
@@ -194,7 +200,7 @@
   .features__item {
     width: 310px;
     margin-bottom: 0;
-    padding-top: 355px;
+    padding-top: 357px;
     text-align: center;
     background-image: url(../img/iphone-screen-2-desktop@1x.png);
     background-position: center top;
@@ -236,8 +242,8 @@
   .features__footer {
     width: 960px;
     .reset-center();
-    padding-top: 155px;
-    padding-left: 378px;
+    padding-top: 157px;
+    padding-left: 376px;
     padding-right: 10px;
     padding-bottom: 115px;
     background-color: transparent;
@@ -248,7 +254,7 @@
 
     h3 {
       width: 300px;
-      margin-bottom: 23px;
+      margin-bottom: 21px;
 
       br {
         display: none;
@@ -264,12 +270,15 @@
       br {
         display: none;
       }
+
+      .transfer--desktop {
+        display: initial;
+      }
     }
 
     a {
       font-size: 18px;
       line-height: 30px;
-      //text-decoration: none;
     }
   }
 }
