@@ -1,20 +1,33 @@
 "use strict";
 
 module.exports = function(grunt) {
-  grunt.loadNpmTasks("grunt-contrib-less");
-  grunt.loadNpmTasks("grunt-browser-sync");
-  grunt.loadNpmTasks("grunt-contrib-watch");
-  grunt.loadNpmTasks("grunt-postcss");
+
+  require("load-grunt-tasks")(grunt);
 
   grunt.initConfig({
+    copy: {
+      build: {
+        files: [{
+          expand: true,
+          cwd: "source",
+          src: [
+            "fonts/**/*.{woff,woff2}",
+            "js/**"
+          ],
+          dest: "build"
+        }]
+      }
+    },
+    clean: {
+      build: ["build"]
+    },
     less: {
       style: {
         files: {
-          "source/css/style.css": "source/less/style.less"
+          "build/css/style.css": "source/less/style.less"
         }
       }
     },
-
     postcss: {
       style: {
         options: {
@@ -22,36 +35,109 @@ module.exports = function(grunt) {
             require("autoprefixer")()
           ]
         },
-        src: "source/css/*.css"
+        src: "build/css/*.css"
       }
     },
-
+    csso: {
+      style: {
+        options: {
+          report: "gzip"
+        },
+        files: {
+          "build/css/style.min.css": ["build/css/style.css"]
+        }
+      }
+    },
+    imagemin: {
+      images: {
+        options: {
+          optimizationlevel: 3,
+          progressive: true
+        },
+        files: [
+          {
+            expand: true,
+            cwd: 'source/img',
+            src: ['**/*.{jpg,png,svg}'],
+            dest: 'build/img'
+          }
+        ]
+      }
+    },
+    cwebp: {
+      images: {
+        options: {
+          q: 80
+        },
+        files: [{
+          expand: true,
+          cwd: 'source/img',
+          src: ['**/*.{jpg,png}'],
+          dest: 'build/img'
+        }]
+      }
+    },
+    svgstore: {
+      options: {
+        includeTitleElement: false
+      },
+      sprite: {
+        files: {
+          "build/img/sprite-icon.svg": ["source/img/icon-*.svg"],
+          "build/img/sprite-logo.svg": ["source/img/logo-*.svg"]
+        }
+      }
+    },
+    posthtml: {
+      options: {
+        use: [
+          require("posthtml-include")()
+        ]
+      },
+      html: {
+        files: [{
+          expand: true,
+          cwd: "source",
+          src: ["*.html"],
+          dest: "build"
+        }]
+      }
+    },
     browserSync: {
       server: {
         bsFiles: {
           src: [
-            "source/*.html",
-            "source/css/*.css"
+            "build/*.html", "build/css/*.css"
           ]
         },
         options: {
-          server: "source/",
-          watchTask: true,
-          notify: false,
-          open: true,
-          cors: true,
-          ui: false
+          server: "build/",
+          watchTask: true
         }
       }
     },
-
     watch: {
+      html: {
+        files: ["source/*.html"],
+        tasks: ["posthtml"]
+      },
       style: {
         files: ["source/less/**/*.less"],
-        tasks: ["less", "postcss"]
+        tasks: ["less", "postcss", "csso"]
       }
     }
   });
 
   grunt.registerTask("serve", ["browserSync", "watch"]);
+  grunt.registerTask("build", [
+    "clean",
+    "copy",
+    "less",
+    "postcss",
+    "csso",
+    "imagemin",
+    "cwebp",
+    "svgstore",
+    "posthtml"
+  ]);
 };

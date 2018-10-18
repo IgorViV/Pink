@@ -154,18 +154,23 @@
   }
 
   .page-footer__copyright-link {
+    display: flex;
+    align-items: center;
     text-align: right;
 
     span {
-      display: inline-block;
+      // display: inline-block;
+      margin-left: auto;
+      margin-right: 5px;
       font-size: 14px;
     }
   }
 
   .page-footer__copyright-img {
-    display: inline-block;
-    margin-right: -7px;
-    width: 42px;
+    // display: inline-block;
+    margin-top: 3px;
+    margin-right: 0;
+    width: 27px;
   }
 }
 
@@ -191,6 +196,11 @@
     &[href]:hover .page-footer__logo-img--desktop {
       fill: @font-color-link;
     }
+
+    &[href]:active .page-footer__logo-img--desktop {
+      fill: @font-color-link--hover;
+      opacity: 0.3;
+    }
   }
 
   .page-footer__copyright-link {
@@ -198,9 +208,5 @@
     span {
       font-size: 18px;
     }
-  }
-
-  .page-footer__copyright-img {
-
   }
 }
