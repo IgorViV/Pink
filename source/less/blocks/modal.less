@@ -76,12 +76,65 @@
 
 @media (min-width: @tablet-width) {
   .modal__content {
-    width: @tablet-width;
+    width: 460px;
+
+    h2 {
+      font-size: 30px;
+      line-height: 40px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 24px;
+    }
+  }
+
+  .modal__button {
+    border-radius: 4px;
+  }
+
+  .modal__content--failure {
+
+    h2 {
+      width: 220px;
+    }
+
+    p {
+      width: 300px;
+    }
+  }
+
+  .modal__button--failure {
+    width: 300px;
+  }
+
+  .modal__content--success {
+    width: 460px;
+
+    p {
+      width: 310px;
+
+      br {
+        display: none;
+      }
+    }
   }
 }
 
 @media (min-width: @desktop-width) {
-  .modal__content {
-    width: @desktop-width;
+  .modal__content--success {
+    width: 780px;
+
+    h2 {
+      width: 400px;
+    }
+
+    p {
+      width: 380px;
+    }
+  }
+
+  .modal__button--success {
+    width: 460px;
   }
 }
