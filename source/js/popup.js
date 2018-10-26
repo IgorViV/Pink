@@ -42,6 +42,7 @@ butFailure.addEventListener("click", function() {
   // evt.defaultPrevented();
   popup.classList.remove("modal--show");
   popupFailure.classList.remove("modal__content--show");
+  lastName.focus();
 });
 
 butSuccess.addEventListener("click", function() {
